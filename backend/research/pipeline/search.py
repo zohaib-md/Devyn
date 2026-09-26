@@ -86,7 +86,7 @@ def research(run, queries: list[str]):
     def add(source: str, url: str, title: str, snippet: str, published_at=None, meta=None):
         if not url or url in seen_urls:
             return
-        if len(pending) + len(seen_urls) >= MAX_ITEMS:
+        if len(seen_urls) >= MAX_ITEMS:
             return
         seen_urls.add(url)
         pending.append(

@@ -61,7 +61,7 @@
 </template>
 
 <script setup>
-import { computed, onMounted, onUnmounted, ref } from "vue";
+import { computed, onMounted, onUnmounted, ref, watch } from "vue";
 import { useRouter } from "vue-router";
 import { createRun, getRun } from "../api.js";
 import CiteChip from "../components/CiteChip.vue";
@@ -106,9 +106,24 @@ async function retry() {
   }
 }
 
+function startPolling() {
+  if (timer) clearInterval(timer);
+  timer = setInterval(fetchRun, 2000);
+}
+
+watch(
+  () => props.id,
+  async () => {
+    run.value = null;
+    loading.value = true;
+    await fetchRun();
+    startPolling();
+  }
+);
+
 onMounted(async () => {
   await fetchRun();
-  timer = setInterval(fetchRun, 2000);
+  startPolling();
 });
 
 onUnmounted(() => {
