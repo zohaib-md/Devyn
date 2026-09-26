@@ -1,0 +1,7 @@
+[
+  {"id": 1, "title": "New Android AI toolkit released", "domain": "example.com", "published_at": "2026-09-01", "snippet": "Google releases a new on-device AI toolkit for Android developers with Gemini Nano integration."},
+  {"id": 2, "title": "Kotlin Multiplatform gains AI libraries", "domain": "dev.to", "published_at": "2026-09-05", "snippet": "Community builds new Kotlin Multiplatform wrappers for LLM inference on mobile."},
+  {"id": 3, "title": "HN discussion: on-device LLM performance", "domain": "news.ycombinator.com", "published_at": "2026-09-10", "snippet": "Developers discuss benchmarks of small language models running on Pixel devices."},
+  {"id": 4, "title": "Awesome Android AI repo trending", "domain": "github.com", "published_at": "", "snippet": "Curated list of Android AI samples, 2000+ stars this month."},
+  {"id": 5, "title": "Android AI course for beginners", "domain": "coursera.org", "published_at": "2026-08-28", "snippet": "New course covering ML Kit, Gemini API, and on-device inference patterns."}
+]

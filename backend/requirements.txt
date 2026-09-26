@@ -1,0 +1,10 @@
+Django==5.*
+djangorestframework
+django-q2
+django-cors-headers
+openai
+pydantic>=2
+tavily-python
+httpx
+pytest
+pytest-django
